@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutu Goti's Resume</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            min-height: 100vh; /* Set minimum height to 100% of viewport height */
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #e7b6aa;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        /* Navigation styles */
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #e2875d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section styles */
+        section {
+            padding-bottom: 20px;
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            color: #007bff; /* Dark blue */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px; /* Adjust font size for smaller screens */
+            }
+            button {
+                padding: 8px 16px;
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rutu Goti's Resume</h1>
+        </header>
+        <nav class="button-container">
+            <button onclick="showSection('personal')">Personal Section</button>
+            <button onclick="showSection('education')">Education</button>
+            <button onclick="showSection('experience')">Experience</button>
+        </nav>
+        <section id="personal" class="active">
+            <h2>Personal Information</h2>
+            <ul>
+                <li><strong>Name:</strong> Rutu Jitendra Bhai Goti</li>
+                <li><strong>Email:</strong> ruugotiwork24@gmail.com</li>
+                <li><strong>Phone:</strong> 99909 886585</li>
+                <li><strong>LinkedIn:</strong> linkedin.com/in/rutugoti</li>
+            </ul>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>University:</strong> Veer Narmad South Gujarat University</li>
+                <li><strong>Degree:</strong> Bachelor of Computer Application</li>
+                <li><strong>Year of Graduation:</strong> 2025</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <strong>Company:</strong> Pvt Limited Company
+                    <ul>
+                        <li><strong>Position:</strong> Web Developer</li>
+                        <li><strong>Duration:</strong> Present</li>
+                        <li><strong>Responsibilities:</strong> Testing</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Show the clicked section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

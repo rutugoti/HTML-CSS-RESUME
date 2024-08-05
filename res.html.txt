@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        section {
+            display: none;
+            padding-bottom: 20px;
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>John Doe's Resume</h1>
+        </header>
+        <nav class="button-container">
+            <button onclick="showSection('personal')">Personal Section</button>
+            <button onclick="showSection('education')">Education</button>
+            <button onclick="showSection('experience')">Experience</button>
+        </nav>
+        <section id="personal" class="active">
+            <h2>Personal Information</h2>
+            <ul>
+                <li><strong>Name:</strong> John Doe</li>
+                <li><strong>Email:</strong> john.doe@example.com</li>
+                <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+                <li><strong>LinkedIn:</strong> linkedin.com/in/johndoe</li>
+            </ul>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>University:</strong> University of Example</li>
+                <li><strong>Degree:</strong> Bachelor of Science in Example</li>
+                <li><strong>Year of Graduation:</strong> 2020</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <strong>Company:</strong> Example Company
+                    <ul>
+                        <li><strong>Position:</strong> Web Developer</li>
+                        <li><strong>Duration:</strong> January 2021 - Present</li>
+                        <li><strong>Responsibilities:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Show the clicked section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
